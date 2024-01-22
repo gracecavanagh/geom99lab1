@@ -43,12 +43,12 @@ function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
     center: new google.maps.LatLng(44.80500, 10.32627),
-    mapTypeId: "hybrid",
+    mapTypeId: "roadmap",
   });
 
   const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
   const icons = {
-    parking: {
+    airport: {
       name: "Airport",
       icon: iconBase + "airports.png",
     },
@@ -64,7 +64,7 @@ function initMap() {
   const features = [
     {
       position: new google.maps.LatLng(47.45312, 8.56194),
-      type: "Airport",
+      type: "airport",
     },
     {
       position: new google.maps.LatLng(-33.91539, 151.2282),
