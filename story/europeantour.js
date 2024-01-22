@@ -22,8 +22,8 @@
   });
 }
 const locations = [
-  { lat: 47.45312, lng: 8.56194},
-  { lat: 47.05171, lng: 8.30751},
+  { lat: 47.45312, lng: 8.56194}, zurich airport
+  { lat: 47.05171, lng: 8.30751}, 
   { lat: 47.05674, lng: 8.48580},
   { lat: 46.95659, lng: 8.51573},
   { lat: 46.00438, lng: 8.95270},
@@ -67,77 +67,49 @@ function initMap() {
       type: "airport",
     },
     {
-      position: new google.maps.LatLng(-33.91539, 151.2282),
+      position: new google.maps.LatLng(47.05171, 8.30751),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91747, 151.22912),
+      position: new google.maps.LatLng(47.05674, 8.48580),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.9191, 151.22907),
+      position: new google.maps.LatLng(46.95659, 8.51573),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91725, 151.23011),
+      position: new google.maps.LatLng(46.00438, 8.95270),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91872, 151.23089),
+      position: new google.maps.LatLng(45.43947, 10.99450),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91784, 151.23094),
+      position: new google.maps.LatLng(45.44200, 10.99867),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91682, 151.23149),
+      position: new google.maps.LatLng(45.43799, 12.33590),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.9179, 151.23463),
+      position: new google.maps.LatLng(45.45605, 12.35194),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91666, 151.23468),
+      position: new google.maps.LatLng(43.77144, 11.25402),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.916988, 151.23364),
+      position: new google.maps.LatLng(41.90309, 12.45449),
       type: "info",
     },
     {
-      position: new google.maps.LatLng(-33.91662347903106, 151.22879464019775),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.916365282092855, 151.22937399734496),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91665018901448, 151.2282474695587),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.919543720969806, 151.23112279762267),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91608037421864, 151.23288232673644),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91851096391805, 151.2344058214569),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91818154739766, 151.2346203981781),
-      type: "parking",
-    },
-    {
-      position: new google.maps.LatLng(-33.91727341958453, 151.23348314155578),
-      type: "library",
-    },
+      position: new google.maps.LatLng(41.79940, 12.59318),
+      type: "airport",
+    }
   ];
 
   features.forEach((feature) => {
