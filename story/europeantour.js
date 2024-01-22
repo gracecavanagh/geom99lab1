@@ -37,17 +37,17 @@ const locations = [
 ]; */
 
 
-let map: google.maps.Map;
+let map;
 
-function initMap(): void {
-  map = new google.maps.Map(document.getElementById("map") as HTMLElement, {
+function initMap() {
+  map = new google.maps.Map(document.getElementById("map"), {
     zoom: 16,
     center: new google.maps.LatLng(-33.91722, 151.23064),
     mapTypeId: "roadmap",
   });
 
   const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
-  const icons: Record<string, any> = {
+  const icons = {
     parking: {
       name: "Parking",
       icon: iconBase + "parking_lot_maps.png",
@@ -61,7 +61,6 @@ function initMap(): void {
       icon: iconBase + "info-i_maps.png",
     },
   };
-
   const features = [
     {
       position: new google.maps.LatLng(-33.91721, 151.2263),
@@ -149,7 +148,7 @@ function initMap(): void {
     });
   });
 
-  const legend = document.getElementById("legend") as HTMLElement;
+  const legend = document.getElementById("legend");
 
   for (const key in icons) {
     const type = icons[key];
@@ -164,10 +163,4 @@ function initMap(): void {
   map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }
 
-declare global {
-  interface Window {
-    initMap: () => void;
-  }
-}
 window.initMap = initMap;
-export {};
