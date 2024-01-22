@@ -41,16 +41,16 @@ let map;
 
 function initMap() {
   map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 16,
-    center: new google.maps.LatLng(-33.91722, 151.23064),
-    mapTypeId: "roadmap",
+    zoom: 7,
+    center: new google.maps.LatLng(44.80500, 10.32627),
+    mapTypeId: "hybrid",
   });
 
   const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
   const icons = {
     parking: {
-      name: "Parking",
-      icon: iconBase + "parking_lot_maps.png",
+      name: "Airport",
+      icon: iconBase + "airports.png",
     },
     library: {
       name: "Library",
@@ -63,8 +63,8 @@ function initMap() {
   };
   const features = [
     {
-      position: new google.maps.LatLng(-33.91721, 151.2263),
-      type: "info",
+      position: new google.maps.LatLng(47.45312, 8.56194),
+      type: "Airport",
     },
     {
       position: new google.maps.LatLng(-33.91539, 151.2282),
