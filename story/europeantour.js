@@ -22,7 +22,7 @@
   });
 }
 const locations = [
-  { lat: 47.45312, lng: 8.56194}, zurich airport
+  { lat: 47.45312, lng: 8.56194},
   { lat: 47.05171, lng: 8.30751}, 
   { lat: 47.05674, lng: 8.48580},
   { lat: 46.95659, lng: 8.51573},
@@ -45,7 +45,30 @@ function initMap() {
     center: new google.maps.LatLng(44.80500, 10.32627),
     mapTypeId: "roadmap",
   });
+  const tripPlanCoordinates = [
+    { lat: 47.45312, lng: 8.56194},
+    { lat: 47.05171, lng: 8.30751}, 
+    { lat: 47.05674, lng: 8.48580},
+    { lat: 46.95659, lng: 8.51573},
+    { lat: 46.00438, lng: 8.95270},
+    { lat: 45.43947, lng: 10.99450},
+    { lat: 45.44200, lng: 10.99867},
+    { lat: 45.43799, lng: 12.33590}, 
+    { lat: 45.45605, lng: 12.35194},  
+    { lat: 43.77144, lng: 11.25402},
+    { lat: 41.90309, lng: 12.45449},
+    { lat: 41.79940, lng: 12.59318}
+  ];
+  const tripPath = new google.maps.Polyline({
+    path: tripPlanCoordinates,
+    geodesic: true,
+    strokeColor: "#FF0000",
+    strokeOpacity: 1.0,
+    strokeWeight: 2,
+  });
 
+  flightPath.setMap(map);
+  
   const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
   const icons = {
     airport: {
