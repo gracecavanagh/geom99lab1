@@ -46,7 +46,7 @@ function initMap() {
     mapTypeId: "roadmap",
   });
   
-  const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+  /*const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
   const icons = {
     airport: {
       name: "Airport",
@@ -148,7 +148,7 @@ function initMap() {
     legend.appendChild(div);
   }
 
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend); */
 }
   const locations = [
     { lat: 47.45312, lng: 8.56194},
