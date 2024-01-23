@@ -52,13 +52,25 @@ function initMap() {
       name: "Airport",
       icon: iconBase + "airports.png",
     },
-    library: {
-      name: "Library",
-      icon: iconBase + "library_maps.png",
+    poi: {
+      name: "Point of Interest",
+      icon: iconBase + "poi.png",
     },
-    info: {
-      name: "Info",
-      icon: iconBase + "info-i_maps.png",
+    mountain: {
+      name: "Mountain",
+      icon: iconBase + "mountains.png",
+    },
+    lodging: {
+      name: "Lodging",
+      icon: iconBase + "lodging.png",
+    },
+    restaurant: {
+      name: "Restaurant",
+      icon: iconBase + "snack_bar.png",
+    },
+    church: {
+      name: "Famous Church",
+      icon: iconBase + "church.png",
     },
   };
   const features = [
@@ -68,47 +80,51 @@ function initMap() {
     },
     {
       position: new google.maps.LatLng(47.05171, 8.30751),
-      type: "info",
+      type: "poi",
     },
     {
       position: new google.maps.LatLng(47.05674, 8.48580),
-      type: "info",
+      type: "mountain",
     },
     {
       position: new google.maps.LatLng(46.95659, 8.51573),
-      type: "info",
+      type: "lodging",
     },
     {
       position: new google.maps.LatLng(46.00438, 8.95270),
-      type: "info",
+      type: "restaurant",
     },
     {
       position: new google.maps.LatLng(45.43947, 10.99450),
-      type: "info",
+      type: "poi",
     },
     {
       position: new google.maps.LatLng(45.44200, 10.99867),
-      type: "info",
+      type: "poi",
     },
     {
       position: new google.maps.LatLng(45.43799, 12.33590),
-      type: "info",
+      type: "poi",
     },
     {
       position: new google.maps.LatLng(45.45605, 12.35194),
-      type: "info",
+      type: "poi",
     },
     {
       position: new google.maps.LatLng(43.77144, 11.25402),
-      type: "info",
+      type: "lodging",
     },
     {
       position: new google.maps.LatLng(41.90309, 12.45449),
-      type: "info",
+      type: "church",
+    },
+    {
+      position: new google.maps.LatLng(43.07533212532653, 12.605486671068745),
+      type: "church",
     },
     {
       position: new google.maps.LatLng(41.79940, 12.59318),
-      type: "airport",
+      type: "airport"
     }
   ];
 
