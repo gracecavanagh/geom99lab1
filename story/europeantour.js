@@ -18,8 +18,8 @@ function initMap() {
     [{ lat: 45.44200, lng: 10.99867 }, "Casa di Giulietta (Shakespeare's Juliet)"],
     [{ lat: 45.43799, lng: 12.33590 }, "Ponte di Rialto (Market on the Grand Canal"],
     [{ lat: 45.45593, lng: 12.35192 }, "Glass-Blowing Factory Tour"],
-    [{ lat: 43.77144, lng: 11.25402 }, ""],
-    [{ lat: 41.90309, lng: 12.45449 }, ""],
+    [{ lat: 43.77144, lng: 11.25402 }, "Piazza della Repubblica (downtown square with hotel)"],
+    [{ lat: 41.90309, lng: 12.45449 }, "Cappella Sistina (Sistine Chapel)"],
     [{ lat: 41.79940, lng: 12.59318 }, "Leonardo da Vinci–Fiumicino Airport"]
   ];
   // Create an info window to share between markers.
