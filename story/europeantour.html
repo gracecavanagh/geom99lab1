@@ -5,9 +5,6 @@
     <title>Grace's Story Map</title>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <script src="https://unpkg.com/@google/markerclustererplus@4.0.1/dist/markerclustererplus.min.js"></script>   
-    <script
-      type="module" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
-      >
     </script>
     <script type="module" src="europeantour.js"></script>
     <style>
@@ -34,11 +31,14 @@
         }
         
     </style>
-
   </head>
   <body>
       <h1>2015 Trip to Switzerland and Italy</h1>
       <h2>HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</h2>
       <div id="map"></div>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
+        defer
+      ></script>
   </body>
 </html>
