@@ -174,6 +174,6 @@ function initMap() {
   });
 
   flightPath.setMap(map);
-}
+  }
 
 window.initMap = initMap;
