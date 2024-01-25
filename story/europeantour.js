@@ -148,7 +148,7 @@ function initMap() {
     legend.appendChild(div);
   }
 
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend); */
+  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }
   const locations = [
     { lat: 47.45312, lng: 8.56194},
