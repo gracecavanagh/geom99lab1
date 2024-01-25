@@ -10,9 +10,9 @@ function initMap() {
   // move between markers; press tab again to cycle through the map controls.
   const tourStops = [
     [{ lat: 47.45312, lng: 8.56194 }, "Zurich Airport"],
-    [{ lat: 47.05171, lng: 8.30751 }, ""],
-    [{ lat: 47.05674, lng: 8.48580 }, ""],
-    [{ lat: 46.95659, lng: 8.51573 }, ""],
+    [{ lat: 47.05171, lng: 8.30751 }, "Kapellbrücke (Chapel Bridge)"],
+    [{ lat: 47.05674, lng: 8.48580 }, "Rigi Mountain Peak"],
+    [{ lat: 46.95659, lng: 8.51573 }, "Hotel Engel"],
     [{ lat: 46.00438, lng: 8.95270 }, ""],
     [{ lat: 45.43947, lng: 10.99450 }, ""],
     [{ lat: 45.44200, lng: 10.99867 }, ""],
