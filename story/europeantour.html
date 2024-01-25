@@ -9,7 +9,7 @@
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap"
       defer>
     </script>
-    <script src="europeantour.js"></script>
+    <script type="module" src="europeantour.js"></script>
     <style>
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
@@ -32,6 +32,14 @@
         color: black;
         text-shadow: 2px 2px 4px #FFFFFF;
         }
+
+        #legend {
+        font-family: Garamond, serif;
+        background: #fff;
+        padding: 10px;
+        margin: 10px;
+        border: 3px solid #000;
+        }
             
     </style>
 
@@ -40,6 +48,7 @@
       <h1>2015 Trip to Switzerland and Italy</h1>
       <h2>HIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIIII</h2>
       <div id="map"></div>
+      <div id="legend"><h3>Legend</h3></div>
 
   </body>
 </html>
