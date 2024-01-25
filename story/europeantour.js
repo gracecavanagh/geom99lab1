@@ -1,16 +1,19 @@
-// The following example creates five accessible and
-// focusable markers.
+// I used https://developers.google.com/maps/documentation/javascript/examples/marker-accessibility#maps_marker_accessibility-javascript
+// as a template for this map.
+// This sets the zoom and focus of the map when the page is opened or refreshed.
+const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+let labelIndex = 0;
+
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
     center: { lat: 44.697212, lng: 10.63233 },
   });
+  // I used https://developers.google.com/maps/documentation/javascript/examples/layer-traffic#maps_layer_traffic-javascript
+  // to add a traffic layer, showing major roads to take between locations.
   const trafficLayer = new google.maps.TrafficLayer();
-
   trafficLayer.setMap(map);
-  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
-  // receives the initial focus when tab is pressed. Use arrow keys to
-  // move between markers; press tab again to cycle through the map controls.
+  // Set each location lat/long and the text that pops up when clicking the icon.
   const tourStops = [
     [{ lat: 47.45312, lng: 8.56194 }, "Zurich Airport"],
     [{ lat: 47.05171, lng: 8.30751 }, "Kapellbrücke (Chapel Bridge)"],
@@ -36,12 +39,6 @@ function initMap() {
       title: `${i + 1}. ${title}`,
       label: `${i + 1}`,
       optimized: false,
-      icon: {
-        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
-        scale: 5,
-      },
-      draggable: true,
-      map: map,
     });
 
     // Add a click listener for each marker, and set up the info window.
