@@ -33,6 +33,12 @@ function initMap() {
       title: `${i + 1}. ${title}`,
       label: `${i + 1}`,
       optimized: false,
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 10,
+      },
+      draggable: true,
+      map: map,
     });
 
     // Add a click listener for each marker, and set up the info window.
