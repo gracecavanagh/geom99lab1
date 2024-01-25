@@ -14,96 +14,21 @@
         /* Always set the map height explicitly to define the size of the div
        * element that contains the map. */
         #map {
-            height: 100%;
+        height: 100%;
         }
 
         /* Optional: Makes the sample page fill the window. */
         html,
         body {
-            height: 100%;
-            margin: 0;
-            padding: 0;
+        height: 100%;
+        margin: 0;
+        padding: 0;
         }
-
-        #legend {
-            font-family: Arial, sans-serif;
-            background: #fff;
-            padding: 10px;
-            margin: 10px;
-            border: 3px solid #000;
-        }
-        
-        #legend h3 {
-          margin-top: 0;
-        }
-        
-        #legend img {
-          vertical-align: middle;
-        }
-        
     </style>
 
   </head>
   <body>
     <div id="map"></div>
-    <div id="legend"><h3>Legend</h3></div>
 
-  </body>
-</html>
-
-<!--html>
-  <head>
-    <title>Grace's Story Map</title>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script type="module" src="europeantour.js"></script>
-    <style>
-        /* 
-         * Always set the map height explicitly to define the size of the div element
-         * that contains the map. 
-         */
-        #map {
-          height: 100%;
-        }
-        
-        /* 
-         * Optional: Makes the sample page fill the window. 
-         */
-        html, 
-        body {
-          height: 100%;
-          margin: 0;
-          padding: 0;
-        }
-        
-        #legend {
-          font-family: Arial, sans-serif;
-          background: #fff;
-          padding: 10px;
-          margin: 10px;
-          border: 3px solid #000;
-        }
-        
-        #legend h3 {
-          margin-top: 0;
-        }
-        
-        #legend img {
-          vertical-align: middle;
-        }
-    </style>
-  </head>
-  <body>
-    <div id="map"></div>
-    <div id="legend"><h3>Legend</h3></div>
-
-    <!-- 
-      The `defer` attribute causes the callback to execute after the full HTML
-      document has been parsed. For non-blocking uses, avoiding race conditions,
-      and consistent behavior across browsers, consider loading using Promises.
-      See https://developers.google.com/maps/documentation/javascript/load-maps-js-api
-      for more information.
-      -->
-    <!--script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDv3MGflguusDaLmV_-BUlmuoUI4EbM88w&callback=initMap&v=weekly"
-      defer></script>
   </body>
 </html>
