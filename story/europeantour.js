@@ -46,7 +46,7 @@ function initMap() {
     mapTypeId: "roadmap",
   });
   
-  /*const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
+  const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
   const icons = {
     airport: {
       name: "Airport",
