@@ -25,7 +25,7 @@ function initMap() {
   // Create an info window to share between markers.
   const infoWindow = new google.maps.InfoWindow();
 
-  // Create the markers.
+  // Create the markers, using https://developers.google.com/maps/documentation/javascript/symbols for icon.
   tourStops.forEach(([position, title], i) => {
     const marker = new google.maps.Marker({
       position,
@@ -34,7 +34,7 @@ function initMap() {
       label: `${i + 1}`,
       optimized: false,
       icon: {
-        path: google.maps.SymbolPath.CIRCLE,
+        path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
         scale: 10,
       },
       draggable: true,
