@@ -1,118 +1,68 @@
-let map;
+async function initMap() {
+  // Request needed libraries.
+  const { Map, InfoWindow } = (await google.maps.importLibrary(
+    "maps",
+  )) as google.maps.MapsLibrary;
+  const { AdvancedMarkerElement, PinElement } =
+    (await google.maps.importLibrary("marker")) as google.maps.MarkerLibrary;
 
-function initMap() {
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 8,
-    center: new google.maps.LatLng( lat: 44.80500, lng: 10.32627 ),
-    mapTypeId: "roadmap"
+  const map = new Map(document.getElementById("map") as HTMLElement, {
+    zoom: 12,
+    center: { lat: 34.84555, lng: -111.8035 },
   });
-  // Add some markers to the map.
-  // Note: The code uses the JavaScript Array.prototype.map() method to
-  // create an array of markers based on a given "locations" array.
-  // The map() method here has nothing to do with the Google Maps API.
-  const iconBase = "https://maps.google.com/mapfiles/kml/shapes/";
-  const icons = {
-    airport: {
-      name: "Airport",
-      icon: iconBase + "airports.png",
-    },
-    poi: {
-      name: "Point of Interest",
-      icon: iconBase + "poi.png",
-    },
-    mountain: {
-      name: "Mountain",
-      icon: iconBase + "mountains.png",
-    },
-    lodging: {
-      name: "Lodging",
-      icon: iconBase + "lodging.png",
-    },
-    restaurant: {
-      name: "Restaurant",
-      icon: iconBase + "snack_bar.png",
-    },
-    church: {
-      name: "Famous Church",
-      icon: iconBase + "church.png",
-    },
-  };
-  const features = [
+
+  // Set LatLng and title text for the markers. The first marker (Boynton Pass)
+  // receives the initial focus when tab is pressed. Use arrow keys to
+  // move between markers; press tab again to cycle through the map controls.
+  const tourStops = [
     {
-      position: new google.maps.LatLng(47.45312, 8.56194),
-      type: "airport",
+      position: { lat: 34.8791806, lng: -111.8265049 },
+      title: "Boynton Pass",
     },
     {
-      position: new google.maps.LatLng(47.05171, 8.30751),
-      type: "poi",
+      position: { lat: 34.8559195, lng: -111.7988186 },
+      title: "Airport Mesa",
     },
     {
-      position: new google.maps.LatLng(47.05674, 8.48580),
-      type: "mountain",
+      position: { lat: 34.832149, lng: -111.7695277 },
+      title: "Chapel of the Holy Cross",
     },
     {
-      position: new google.maps.LatLng(46.95659, 8.51573),
-      type: "lodging",
+      position: { lat: 34.823736, lng: -111.8001857 },
+      title: "Red Rock Crossing",
     },
     {
-      position: new google.maps.LatLng(46.00438, 8.95270),
-      type: "restaurant",
+      position: { lat: 34.800326, lng: -111.7665047 },
+      title: "Bell Rock",
     },
-    {
-      position: new google.maps.LatLng(45.43947, 10.99450),
-      type: "poi",
-    },
-    {
-      position: new google.maps.LatLng(45.44200, 10.99867),
-      type: "poi",
-    },
-    {
-      position: new google.maps.LatLng(45.43799, 12.33590),
-      type: "poi",
-    },
-    {
-      position: new google.maps.LatLng(45.45605, 12.35194),
-      type: "poi",
-    },
-    {
-      position: new google.maps.LatLng(43.77144, 11.25402),
-      type: "lodging",
-    },
-    {
-      position: new google.maps.LatLng(41.90309, 12.45449),
-      type: "church",
-    },
-    {
-      position: new google.maps.LatLng(43.07533212532653, 12.605486671068745),
-      type: "church",
-    },
-    {
-      position: new google.maps.LatLng(41.79940, 12.59318),
-      type: "airport"
-    }
   ];
 
-  features.forEach((feature) => {
-    new google.maps.Marker({
-      position: feature.position,
-      icon: icons[feature.type].icon,
-      map: map,
+  // Create an info window to share between markers.
+  const infoWindow = new InfoWindow();
+
+  // Create the markers.
+  tourStops.forEach(({ position, title }, i) => {
+    const pin = new PinElement({
+      glyph: `${i + 1}`,
+    });
+
+    const marker = new AdvancedMarkerElement({
+      position,
+      map,
+      title: `${i + 1}. ${title}`,
+      content: pin.element,
+    });
+
+    // Add a click listener for each marker, and set up the info window.
+    marker.addListener("click", ({ domEvent, latLng }) => {
+      const { target } = domEvent;
+      infoWindow.close();
+      infoWindow.setContent(marker.title);
+      infoWindow.open(marker.map, marker);
     });
   });
-  // Add a marker clusterer to manage the markers.
-  const legend = document.getElementById("legend");
-
-  for (const key in icons) {
-    const type = icons[key];
-    const name = type.name;
-    const icon = type.icon;
-    const div = document.createElement("div");
-
-    div.innerHTML = '<img src="' + icon + '"> ' + name;
-    legend.appendChild(div);
-  }
-
-  map.controls[google.maps.ControlPosition.RIGHT_BOTTOM].push(legend);
 }
 
-window.initMap = initMap;
+initMap();
+export {};
+
