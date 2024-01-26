@@ -1,9 +1,6 @@
 // I used https://developers.google.com/maps/documentation/javascript/examples/marker-accessibility#maps_marker_accessibility-javascript
 // as a template for this map.
 // This sets the zoom and focus of the map when the page is opened or refreshed.
-const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-let labelIndex = 0;
-
 function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
