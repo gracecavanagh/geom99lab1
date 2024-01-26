@@ -4,7 +4,7 @@
 const labels = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 let labelIndex = 0;
 
-function initMap() {
+async function initMap() {
   const map = new google.maps.Map(document.getElementById("map"), {
     zoom: 7,
     center: { lat: 44.697212, lng: 10.63233 },
