@@ -41,7 +41,7 @@ function initMap() {
       optimized: false,
     });
 
-    // Add a click listener for each marker, and set up the info window.
+    // Click listener for each marker, and set up the info window.
     marker.addListener("click", () => {
       infoWindow.close();
       infoWindow.setContent(marker.getTitle());
